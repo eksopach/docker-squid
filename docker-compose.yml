@@ -1,7 +1,9 @@
 Squid:
-  image: sameersbn/squid:3.5.27-2
+  image: eksopach/squid:latest
   ports:
     - "3128:3128"
   volumes:
-    - /srv/docker/squid/cache:/var/spool/squid
+    - ./squid.conf:/etc/squid/squid.conf
+    - ~/Volumes/squid/cache:/var/spool/squid
+    - ~/Volumes/squid/log:/var/log/squid 
   restart: always

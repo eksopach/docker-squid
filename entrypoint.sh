@@ -9,6 +9,9 @@ create_log_dir() {
 
 create_cache_dir() {
   mkdir -p ${SQUID_CACHE_DIR}
+  mkdir -p ${SQUID_CACHE_ROCK_DIR}
+  mkdir -p ${SQUID_CACHE_AUFS_DIR}
+
   chown -R ${SQUID_USER}:${SQUID_USER} ${SQUID_CACHE_DIR}
 }
 
